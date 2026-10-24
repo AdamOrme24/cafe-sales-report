@@ -20,4 +20,20 @@ daily_takings = [412.50, 389.20, 455.00, 501.75, 620.40, 710.10] #List of daily 
 
 #Sunday pop-up day: one-off stall at the local market
 days = days + ("Sun",)  # Adding Sunday to the days tuple for the pop-up day
-daily_takings.append(298.60)  # Adding Sunday takings to the daily takings list
+daily_takings.append(298.60)  # Adding Sunday takings to the daily takings 
+
+#Sales Figures
+total = sum(daily_takings)
+average = total / len(daily_takings)
+best = max(daily_takings)
+worst = min(daily_takings) 
+worst_day = days[daily_takings.index(worst)]
+top_three_days = sorted(zip(daily_takings, days), reverse=True)[:3]  # Get top three days with highest takings
+vat_included = round(total - (total / (1 + vat_rate)), 2)  # Calculate VAT included in total takings
+
+print(f"Total Takings: £{total:.2f}")
+print(f"Average Daily Takings: £{average:.2f}")
+print(f"Best Day: {days[daily_takings.index(best)]} with £{best:.2f}")
+print(f"Worst Day: {worst_day} with £{worst:.2f}")
+print(f"Top Three Days: {', '.join([f'{day} (£{takings:.2f})' for takings, day in top_three_days])}")
+print(f"VAT Included in Total Takings: £{vat_included:.2f}")
