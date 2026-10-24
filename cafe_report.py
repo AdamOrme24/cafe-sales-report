@@ -37,3 +37,16 @@ print(f"Best Day: {days[daily_takings.index(best)]} with £{best:.2f}")
 print(f"Worst Day: {worst_day} with £{worst:.2f}")
 print(f"Top Three Days: {', '.join([f'{day} (£{takings:.2f})' for takings, day in top_three_days])}")
 print(f"VAT Included in Total Takings: £{vat_included:.2f}")
+
+#What Items Sold
+items_sold = ["latte", "croissant", "sandwich", "tea", "muffin", "latte", "flat white", "muffin", "tea"]
+lattes = items_sold.count("latte")
+unique_items = len(set(items_sold))  # Get unique items sold
+featured = ("Oat Latte", "coffee", 3.40)  # product record: name, category, price
+name, category, price = featured
+
+print("-" * 40)
+print(f"Lattes sold:      {lattes} of {len(items_sold)} items")
+print(f"Different items:  {unique_items}")
+print(f"Featured product: {name} ({category}) at £{price:.2f}")
+
