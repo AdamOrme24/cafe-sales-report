@@ -50,3 +50,19 @@ print(f"Lattes sold:      {lattes} of {len(items_sold)} items")
 print(f"Different items:  {unique_items}")
 print(f"Featured product: {name} ({category}) at £{price:.2f}")
 
+#Customer Insights
+
+loyalty_members = ['Amy', 'Ben', 'Charlie', 'Diana', 'Ethan']
+weekday_customers = ['Fiona', 'George', 'Hannah']
+weekend_customers = ['Fiona', 'Harvey', 'Ian', 'Jack', 'Charlie', 'Diana']  # Charlie and Diana are weekend customers
+members_to_win_back = ['John', 'Kylie', 'Liam']
+open_on_sunday_next_week = True  # Café will be open on Sunday next week
+came_on_any_day = set(weekday_customers) & set(weekend_customers)
+
+print("-" * 40)
+print(f"Weekday Customers: {', '.join(weekday_customers)}")
+print(f"Weekend Customers: {', '.join(weekend_customers)}")
+print(f"Came on Weekend and Weekday: {', '.join(came_on_any_day) if came_on_any_day else 'None'}")
+print(f"Loyalty Members: {', '.join(loyalty_members)}")
+print(f"Members to Win Back: {', '.join(members_to_win_back)}")
+print(f"Open on Sunday Next Week: {'Yes' if open_on_sunday_next_week else 'No'}")
